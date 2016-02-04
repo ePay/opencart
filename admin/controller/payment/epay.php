@@ -99,7 +99,7 @@ class ControllerPaymentEPay extends Controller {
 		$data['cancel'] = $this->url->link('extension/payment', 'token=' . $this->session->data['token'], 'SSL');
         $data['search'] = $this->url->link('payment/epay/search', 'token=' . $this->session->data['token'], 'SSL');
         
-        if (isset($this->request->post['cod_total'])) {
+        if (isset($this->request->post['epay_total'])) {
 			$data['epay_total'] = $this->request->post['epay_total'];
 		} else {
 			$data['epay_total'] = $this->config->get('epay_total');
